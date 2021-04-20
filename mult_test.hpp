@@ -34,3 +34,5 @@ TEST(MultTest, ZeroOperand) {
 	Mult* test = new Mult(testVal1, testVal2);
 	EXPECT_EQ(test->evaluate(), 0);
 }//testing to see if zero as an operand returns zero as a product
+
+#endif
