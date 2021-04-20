@@ -26,7 +26,6 @@ TEST(MultTest, NegAndNeg) {
 	Mult* test = new Mult(testVal1, testVal2);
 	EXPECT_EQ(test->evaluate(), 15);
 }//testing to see if negative number times a negative returns a positive number
-#endif
 
 TEST(MultTest, ZeroOperand) {
 	Base* testVal1 = new ZeroOpMock();
