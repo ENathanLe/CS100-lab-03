@@ -38,7 +38,7 @@ TEST(AddTest, StringifyADd) {
 	Base* testVal1 = new SixOpMock();
 	Base* testVal2 = new EightOpMock();
 	Add* test = new Add(testVal1, testVal2);
-	EXPECT_EQ(test->stringify(), "6.0 + 8.0");
+	EXPECT_EQ(test->stringify(), "(6.0 + 8.0)");
 }//adding two pos and string version of this
 
 #endif
