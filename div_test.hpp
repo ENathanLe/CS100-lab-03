@@ -39,7 +39,7 @@ TEST(DivTest, DivideByZero) {
 	Base* testVal1 = new EightOpMock();
 	Base* testVal2 = new ZeroOpMock();
 	Div* test = new Div(testVal1, testVal2);
-	EXPECT_THROW(test->evaluate(), runtime_error);	
+	EXPECT_TRUE(isinf(test->evaluate()));
 }//testing divide by zero
 
 
