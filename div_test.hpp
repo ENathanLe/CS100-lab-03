@@ -39,9 +39,23 @@ TEST(DivTest, DivideByZero) {
 	Base* testVal1 = new EightOpMock();
 	Base* testVal2 = new ZeroOpMock();
 	Div* test = new Div(testVal1, testVal2);
-	EXPECT_EQ(test->evaluate(), 404);	
+	EXPECT_EQ(test->evaluate(), (8/0));	
 }//testing divide by zero
 
+
+TEST(DivTest, StringDivPosPos) {
+	Base* testVal1 = new EightOpMock();
+	Base* testVal2 = new SixOpMock();
+	Div* test = new Div(testVal1, testVal2);
+	EXPECT_EQ(test->stringify(), "8.0 / 6.0");	
+}//testing stringify for pos / pos
+
+TEST(DivTest, StringDivNegNeg) {
+	Base* testVal1 = new NegFiveMock();
+	Base* testVal2 = new NegThreeMock();
+	Div* test = new Div(testVal1, testVal2);
+	EXPECT_EQ(test->stringify(), "-5.0 / -3.0");
+}//testing stringify for neg / neg
 
 #endif
 
