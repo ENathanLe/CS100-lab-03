@@ -7,6 +7,7 @@
 #include "div_test.hpp"
 #include "pow_test.hpp"
 #include "ENathanLe_tests.hpp"
+#include "toothnnail_tests.hpp"
 
 int main(int argc, char **argv) {
   ::testing::InitGoogleTest(&argc, argv);
