@@ -41,7 +41,7 @@ TEST(PowTest, PowStringify) {
     Base* val = new Op(6);
     Base* val2 = new Op(-1);
     Base* test = new Pow(val, val2);
-    EXPECT_EQ(test->stringify(), "6 ** -1");
+    EXPECT_EQ(test->stringify(), "(6 ** -1)");
 }
 
 TEST(PowTest, PowStringifyMult) {
@@ -50,19 +50,19 @@ TEST(PowTest, PowStringifyMult) {
     Base* val3 = new Op(3);
     Base* mult = new Mult(val1, val2);
     Base* test = new Pow(mult, val3);
-    EXPECT_EQ(test->stringify(), "6 * 2 ** 3");
+    EXPECT_EQ(test->stringify(), "((6 * 2) ** 3)");
 }
 
 TEST(PowTest, PowStringifyZero) {
     Base* val = new Op(0);
     Base* test = new Pow(val, val);
-    EXPECT_EQ(test->stringify(), "0 ** 0");
+    EXPECT_EQ(test->stringify(), "(0 ** 0)");
 }
 
 TEST(PowTest, PowStringifyNeq) {
     Base* val = new Op(-2);
     Base* test = new Pow(val, val);
-    EXPECT_EQ(test->stringify(), "-2 ** -2");
+    EXPECT_EQ(test->stringify(), "(-2 ** -2)");
 }
 
 TEST(PowTest, PowEvalNeg) {

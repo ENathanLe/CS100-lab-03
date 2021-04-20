@@ -31,14 +31,14 @@ TEST(SubTest, StringifySubNeg) {
 	Base* test1 = new EightOpMock();
 	Base* test2 = new NegFiveMock();
 	Sub* test = new Sub(test1, test2);
-	EXPECT_EQ(test->stringify(), "8.0 - -5.0");
+	EXPECT_EQ(test->stringify(), "(8.0 - -5.0)");
 }//subtracting negative stringifyd
 
 TEST(SubTest, StringifySubPos) {
 	Base* test1 = new NegFiveMock();
 	Base* test2 = new EightOpMock();
 	Sub* test = new Sub(test1, test2);
-	EXPECT_EQ(test->stringify(), "-5.0 - 8.0");
+	EXPECT_EQ(test->stringify(), "(-5.0 - 8.0)");
 }//subtracting positive stringifyd
 
 #endif

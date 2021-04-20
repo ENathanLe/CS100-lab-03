@@ -2,6 +2,7 @@
 #define __DIV_HPP__
 
 #include "base.hpp"
+#include <math.h>
 
 using namespace std;
 
@@ -17,7 +18,7 @@ class Div : public Base {
 		
 		double evaluate() {return p1->evaluate() / p2->evaluate();}
 
-		string stringify() {return p1->stringify() + " / " + p2->stringify();}
+		string stringify() {return "(" + p1->stringify() + " / " + p2->stringify() + ")";}
 };
 
 #endif
