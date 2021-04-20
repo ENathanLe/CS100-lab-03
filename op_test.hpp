@@ -5,6 +5,7 @@
 #include <string>
 
 #include "op.hpp"
+#include "rand.cpp"
 
 TEST(OpTest, OpEvaluateNonZero) {
     Op* test = new Op(8);
@@ -40,6 +41,23 @@ TEST(OpTest, OpStringifyNeg) {
 TEST(OpTest, OpStringifyZero) {
     Op* test = new Op(0);
     EXPECT_EQ(test->stringify(), "0");
+}
+
+TEST(RandTest, Rand) {
+    Rand* test = new Rand();
+    EXPECT_GE(test->evaluate(), 0);
+}
+
+TEST(RandTest, RandEvaluate) {
+    srand(1);
+    Rand* test = new Rand();
+    EXPECT_EQ(test->evaluate(), 83);
+}
+
+TEST(RandTest, RandStringify) {
+    srand(25);
+    Rand* test = new Rand();
+    EXPECT_EQ(test->stringify(), "61");
 }
 
 #endif //__OP_TEST_HPP__

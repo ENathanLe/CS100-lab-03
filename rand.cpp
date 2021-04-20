@@ -1,5 +1,4 @@
 #include "rand.hpp"
+#include <stdlib.h>
 
-public rand() {
-	base();
-	
+Rand::Rand() : Op(rand() % 100) {}

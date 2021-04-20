@@ -1,12 +1,12 @@
-ifndef __RAND_HPP__
-define __RAND_HPP__
+#ifndef __RAND_HPP__
+#define __RAND_HPP__
 
-#include "opp.hpp"
+#include "op.hpp"
 
 
-class rand: public opp {
+class Rand: public Op {
     public:
-	rand();
+	Rand();
 	
-
+};
 #endif //__RAND_HPP__
