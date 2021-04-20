@@ -35,7 +35,12 @@ TEST(DivTest, NegDivPos) {
 	EXPECT_EQ(test->evaluate(), (-5.0/8.0));
 }//testing to see if negative divided by positive works
 
-
+TEST(DivTest, DivideByZero) {
+	Base* testVal1 = new EightOpMock();
+	Base* testVal2 = new ZeroOpMock();
+	Div* test = new Div(testVal1, testVal2);
+	EXPECT_EQ(test->evaluate(), 404);	
+}//testing divide by zero
 
 
 #endif
