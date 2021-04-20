@@ -7,21 +7,17 @@ using namespace std;
 
 class Mult : public Base {
 	private: 
-		double input1;
-		double input2;
-		string inputOne;
-		string inputTwo;
+		Base* p1;
+		Base* p2;
 	public:
 		Mult(Base* operand1, Base* operand2) : Base() {
-			this->input1 = operand1->evaluate();
-			this->input2 = operand2->evaluate();
-			this->inputOne = operand1->stringify();
-			this->inputTwo = operand2->stringify();
+			this->p1 = operand1;
+			this->p2 = operand2;
 		}
 		
-		double evaluate() {return (input1 * input2);}
+		double evaluate() {return p1->evaluate() * p2->evaluate();}
 
-		string stringify() {return inputOne + " * " + inputTwo;}
+		string stringify() {return p1->stringify() + " * " + p2->stringify();}
 };
 
 #endif
