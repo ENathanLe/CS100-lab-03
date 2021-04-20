@@ -2,6 +2,7 @@
 #define __DIV_HPP__
 
 #include "base.hpp"
+#include <math.h>
 
 using namespace std;
 
